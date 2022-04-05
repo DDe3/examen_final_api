@@ -25,7 +25,7 @@ public class CompraPasajeRestController {
 		return ResponseEntity.ok(service.realizarCheckIn(numero));
 	}
 	
-	@GetMapping(path = "{numero}")
+	@GetMapping(path = "/{numero}")
 	public ResponseEntity<ReportePasaje> buscarPasaje(@PathVariable("numero") String numero) {
 		return null;
 	}
