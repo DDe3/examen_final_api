@@ -22,7 +22,7 @@ public class VueloRepoImpl implements IVueloRepo {
 
 	@Override
 	public List<Vuelo> buscarVuelosDisponibles(String origen, String destino, LocalDate fechaVuelo) {
-		TypedQuery<Vuelo> mq = em.createQuery("SELECT a FROM Avion a WHERE a.origen=:origen AND a.destino=:destino AND a.fechaVuelo=:fechaVuelo",Vuelo.class);
+		TypedQuery<Vuelo> mq = em.createQuery("SELECT a FROM Vuelo a WHERE a.origen=:origen AND a.destino=:destino AND a.fechaVuelo=:fechaVuelo",Vuelo.class);
 		mq.setParameter("origen", origen);
 		mq.setParameter("destino", destino);
 		mq.setParameter("fechaVuelo", fechaVuelo);
@@ -37,7 +37,7 @@ public class VueloRepoImpl implements IVueloRepo {
 
 	@Override
 	public Vuelo buscarVueloPorNumero(String numero) {
-		TypedQuery<Vuelo> mq = em.createQuery("SELECT a FROM Avion a WHERE a.numero=:numero", Vuelo.class);
+		TypedQuery<Vuelo> mq = em.createQuery("SELECT a FROM Vuelo a WHERE a.numero=:numero", Vuelo.class);
 		mq.setParameter("numero", numero);
 		return mq.getSingleResult();
 	}

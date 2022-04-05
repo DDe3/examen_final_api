@@ -24,7 +24,7 @@ public class VueloRestController {
 	@Autowired
 	private IVueloService service;
 	
-	@GetMapping(path = "/disponibles", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+	@GetMapping(path = "/disponibles")
 	public ResponseEntity<List<VueloTo>> buscarVuelosDisponibles(@RequestBody BuscarVuelo bv) {
 		return ResponseEntity.ok(service.buscarVuelosDisponibles(bv));
 	}
@@ -34,12 +34,12 @@ public class VueloRestController {
 		return ResponseEntity.ok(service.buscarVueloDisponible(numero));
 	}
 	
-	@PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+	@PostMapping()
 	public ResponseEntity<String> reservarVuelo(@RequestBody ComprarVuelo cv) {
 		return ResponseEntity.ok(service.comprarVuelo(cv));
 	}
 	
-	@GetMapping(path = "/{numero}", produces = MediaType.APPLICATION_JSON_VALUE)
+	@GetMapping(path = "/debug/{numero}")
 	public ResponseEntity<VueloTo> buscarVuelo(@PathVariable("numero") String numero) {
 		return ResponseEntity.ok(service.buscarVuelo(numero));
 	}

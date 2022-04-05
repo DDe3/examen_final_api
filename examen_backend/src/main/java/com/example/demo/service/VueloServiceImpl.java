@@ -49,6 +49,7 @@ public class VueloServiceImpl implements IVueloService {
 	@Override
 	public VueloTo buscarVueloDisponible(String numeroVuelo) {
 		Vuelo v = iVueloRepo.buscarVueloPorNumero(numeroVuelo);
+		System.out.println(v);
 		if (v!=null) {
 			if (v.getEstado()=="Disponible") {
 				return mapVuelo(v);
