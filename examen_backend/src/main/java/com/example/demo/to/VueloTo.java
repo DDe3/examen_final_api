@@ -12,6 +12,8 @@ public class VueloTo {
 	
 	
 	
+	
+	
 	public Integer getNumeroAsientos() {
 		return numeroAsientos;
 	}
