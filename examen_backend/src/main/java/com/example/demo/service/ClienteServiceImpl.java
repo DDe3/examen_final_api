@@ -17,4 +17,10 @@ public class ClienteServiceImpl implements IClienteService {
 		return repo.buscarClientePorCedula(cedula);
 	}
 
+	@Override
+	public String insertarCliente(Cliente cliente) {
+		repo.insertarCliente(cliente);
+		return "Cliente registrado";
+	}
+
 }

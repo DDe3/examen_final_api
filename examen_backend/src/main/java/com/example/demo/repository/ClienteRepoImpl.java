@@ -23,4 +23,9 @@ public class ClienteRepoImpl implements IClienteRepo {
 		return mq.getSingleResult();
 	}
 
+	@Override
+	public void insertarCliente(Cliente cliente) {
+		em.persist(cliente);
+	}
+
 }

@@ -25,15 +25,15 @@ public class CompraPasaje {
 	@Column(name="copa_id")
 	private Integer id;
 	
-	@Column(name="copa_id")
+	@Column(name="copa_numero")
 	private String numero;
-	@Column(name="copa_id")
+	@Column(name="copa_fechaCompra")
 	private LocalDate fechaCompra;
-	@Column(name="copa_id")
+	@Column(name="copa_numeroTarjeta")
 	private String numeroTarjeta;
-	@Column(name="copa_id")
+	@Column(name="copa_cantidadAsientosComprados")
 	private Integer cantidadAsientosComprados;
-	@Column(name="copa_id")
+	@Column(name="copa_estado")
 	private String estado;
 	
 	@JsonIgnore

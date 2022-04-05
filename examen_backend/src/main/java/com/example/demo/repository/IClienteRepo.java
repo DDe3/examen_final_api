@@ -7,6 +7,7 @@ import com.example.demo.repository.modelo.Cliente;
 public interface IClienteRepo {
 	
 	Cliente buscarClientePorCedula(String cedula);
+	void insertarCliente(Cliente cliente);
 
 
 }

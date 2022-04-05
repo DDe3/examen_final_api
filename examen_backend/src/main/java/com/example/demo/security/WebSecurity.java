@@ -34,7 +34,7 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
 		httpSecurity.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
 		.and().cors().and().csrf().disable()
 		.authorizeRequests()
-		.antMatchers(HttpMethod.GET, "URL")
+		.antMatchers(HttpMethod.POST, "/ApiClientes/V1/clientes")
 		.permitAll()
 		.anyRequest().authenticated().and()
 		.addFilter(new JWTAuthorizationFilter(authenticationManager()));
