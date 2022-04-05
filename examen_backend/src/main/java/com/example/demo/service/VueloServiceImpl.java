@@ -41,6 +41,7 @@ public class VueloServiceImpl implements IVueloService {
 		vto.setCategoria(v.getCategoria());
 		vto.setNombre(v.getAvion().getNombre());
 		vto.setValorAsiento(v.getValorAsiento());
+		vto.setNumeroAsientos(v.getAsientosDisponibles());
 		return vto;
 	}
 
